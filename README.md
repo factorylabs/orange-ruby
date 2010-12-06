@@ -21,41 +21,42 @@ Bundler 1.0.7 is installed by default, and gems are cached into vendor by defaul
 We install a bunch of gems automatically.  Here's the list:
 
 ### General
-bundler (1.0.7)
-rails (3.0.3)
-thin (to speed up Cucumber/Capybara runs)
-mysql2
-haml-rails
-formtastic
-jammit (for asset packaging)
-configy (for application-wide configuration)
-newrelic_rpm
-rpm_contrib
-hoptoad_notifier
+* bundler (1.0.7)
+* rails (3.0.3)
+* thin (to speed up Cucumber/Capybara runs)
+* mysql2
+* haml-rails
+* formtastic
+* jammit (for asset packaging)
+* configy (for application-wide configuration)
+* newrelic_rpm
+* rpm_contrib
+* hoptoad_notifier
 
 ### Development and Test
-annotate
-engineyard
-db-entropy
-ruby-debug
-rake-hooks
-factory_girl_generator
-evergreen
-fakeweb
-timecop
-shoulda
-mocha
-factory_girl_rails
-capybara
-database_cleaner
-cucumber-rails
-launchy
+* annotate
+* engineyard
+* db-entropy
+* ruby-debug
+* rake-hooks
+* factory_girl_generator
+* evergreen
+* fakeweb
+* timecop
+* shoulda
+* mocha
+* factory_girl_rails
+* capybara
+* database_cleaner
+* cucumber-rails
+* launchy
 
 ## Public directory
 We remove unnecessary files from public (favicon, robots.txt, rails.png, index.html), create a default robots.txt that excludes the admin, and replace Prototype with jQuery.  In doing so, we download jQuery from the Google CDN to public/javascripts/jquery and register the jQuery files in Rails' defaults expansion.
 
 ## Application stuff
 A bunch of different things happen here:
+
 * Rewrite the application layout to use Haml
 * Add a Configy initializer and create a default application-wide config.yml
 * Create an empty hacks.rb initializer for one-off patches
@@ -69,6 +70,7 @@ A bunch of different things happen here:
 * Set up a build.sh script for CI (Not implemented yet)
 
 ## Git
+
 * Create a .gitignore with some convenient defaults
 * Create a git repo and add everything in an initial commit.
 * Create a new Github repo and push to it (Not implemented yet)
