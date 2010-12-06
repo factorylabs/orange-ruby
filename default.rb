@@ -79,7 +79,6 @@ log "\n-- Processing public directory ...\n"
   remove_file "public/index.html"
   remove_file "public/favicon.ico"
   remove_file "public/robots.txt"
-  remove_file "public/index.html"
   remove_file "public/images/rails.png"
 
   # Create a sane robots.txt
