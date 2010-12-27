@@ -17,3 +17,4 @@ Feature:
       | deploy/before_restart.rb |
       | deploy/after_restart.rb  |
     And a directory named "cookbooks" should exist
+    And a directory named "tmp/recipes" should not exist
