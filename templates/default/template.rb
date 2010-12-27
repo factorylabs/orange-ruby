@@ -3,10 +3,7 @@
 # by F/ Interactive
 
 say "\nF/ Interactive Rails 3 Template\n"
-say "\nDetails at http://github.com/factorylabs/templates\n"
-
-base_url  = "https:\/\/github.com/factorylabs/templates/raw/master/templates/default"
-
+say "\nDetails at http://github.com/factorylabs/orange-ruby\n"
 
 require 'net/http'
 require 'net/https'
@@ -28,14 +25,6 @@ def replace_in_file(relative_path, find, replace)
     raise "#{find.inspect} not found in #{relative_path}"
   end
   File.open(path, "w") { |file| file.write(contents) }
-end
-
-def action_mailer_host(rails_env, host)
-  inject_into_file(
-    "config/environments/#{rails_env}.rb",
-    "\n\n  config.action_mailer.default_url_options = { :host => '#{host}' }",
-    :before => "\nend"
-  )
 end
 
 def download_file(uri_string, destination)
@@ -72,7 +61,7 @@ apply File.join(File.dirname(__FILE__),'git.rb')
 
 docs = <<-DOCS
 \nTemplate run is complete.  Please run the following to complete the setup of #{app_name.humanize}:
-- Add your API key to config/intializers/hoptoad.rb
+- Add your API key to config/initializers/hoptoad.rb
 - Import your config/newrelic.yml
 DOCS
 
