@@ -1,4 +1,3 @@
-@announce @wip
 Feature:
   In order to easily configure application settings
   As a user generating a new Rails app
