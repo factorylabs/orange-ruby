@@ -12,9 +12,7 @@ module Orange
       def rails(project)
         exec(<<-COMMAND)
           rails new #{project} \
-            --template=#{template} \
-            --skip-test-unit \
-            --skip-prototype
+            --template=#{template}
         COMMAND
       end
 
