@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["F/ Interactive"]
   s.email       = ["jay.zeschin@factorylabs.com"]
   s.homepage    = "http://github.com/factorylabs/orange-ruby"
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Rails 3 generators wrapped up in a nice tidy gem}
+  s.description = %q{Rails 3 generators wrapped up in a nice tidy gem}
   
   s.add_dependency              "thor"
   s.add_dependency              'rails', '~> 3.0.3'
