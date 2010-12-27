@@ -12,4 +12,3 @@ create_file 'README.md', <<-FILE.gsub(/^ {2}/, '')
   * http://github.com/factorylabs/#{app_name}
   * Application-specific documentation and notes go here.
 FILE
-end
