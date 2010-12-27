@@ -34,7 +34,7 @@ file 'deploy/after_restart.rb', <<-RUBY.gsub(/^ {2}/, '')
 RUBY
 
 # Import cookbooks
-say "Importing chef cookbooks ..."
-download_file "https://github.com/factorylabs/ey-cloud-recipes/tarball/master"
-
-# TODO: Flesh this out.
+say "Importing initial chef cookbooks ..."
+run "git clone git@github.com:factorylabs/ey-cloud-recipes.git tmp/recipes"
+run 'cp -R tmp/recipes/cookbooks cookbooks'
+run 'rm -rf tmp/recipes'

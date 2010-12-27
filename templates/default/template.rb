@@ -42,6 +42,7 @@ def download_file(uri_string, destination)
   uri = URI.parse(uri_string)
   http = Net::HTTP.new(uri.host, uri.port)
   http.use_ssl = true if uri_string =~ /^https/
+  http.verify_mode = OpenSSL::SSL::VERIFY_NONE
   request = Net::HTTP::Get.new(uri.path)
   contents = http.request(request).body
   path = File.join(destination_root, destination)
