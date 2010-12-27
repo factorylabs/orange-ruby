@@ -4,7 +4,7 @@ Feature:
   I would like to have configy set up for me automatically
   
   Background:
-    Given I set the command timeout to 30 seconds
+    Given I set a generous command timeout
 
   Scenario: The configy generator creates an initializer
     When I run "orange rails test_app"

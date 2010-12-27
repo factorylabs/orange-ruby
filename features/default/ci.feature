@@ -4,7 +4,7 @@ Feature:
   I would like to have a build script set up for me
   
   Background:
-    Given I set the command timeout to 30 seconds
+    Given I set a generous command timeout
 
   Scenario: The core extensions generator creates a build.sh
     When I run "orange rails test_app"

@@ -5,7 +5,7 @@ Feature:
   I would like to have a place for hacks to live set up automatically
   
   Background:
-    Given I set the command timeout to 30 seconds
+    Given I set a generous command timeout
 
   Scenario: The hacks generator creates an initializer
     When I run "orange rails test_app"

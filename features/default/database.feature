@@ -4,7 +4,7 @@ Feature:
   I would like to have an example database.yml set up automatically
   
   Background:
-    Given I set the command timeout to 30 seconds
+    Given I set a generous command timeout
 
   Scenario: The database generator creates a database.example.yml
     When I run "orange rails test_app"

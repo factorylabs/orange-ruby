@@ -4,7 +4,7 @@ Feature:
   I would like to have a cloud keypair set up for me
   
   Background:
-    Given I set the command timeout to 30 seconds
+    Given I set a generous command timeout
 
   Scenario: The keypair generator creates a new RSA keypair
     When I run "orange rails test_app"

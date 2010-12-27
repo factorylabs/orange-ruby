@@ -4,7 +4,7 @@ Feature:
   I would like to have a core extensions directory and initializer set up for me automatically
   
   Background:
-    Given I set the command timeout to 30 seconds
+    Given I set a generous command timeout
 
   Scenario: The core extensions generator creates an initializer and a lib directory
     When I run "orange rails test_app"

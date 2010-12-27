@@ -4,7 +4,7 @@ Feature:
   I would like to have a blank factories.rb set up automatically
   
   Background:
-    Given I set the command timeout to 30 seconds
+    Given I set a generous command timeout
 
   Scenario: The factory_girl generator creates factories.rb
     When I run "orange rails test_app"
