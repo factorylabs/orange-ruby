@@ -28,16 +28,9 @@ module Orange
       private
 
       def template
-        File.expand_path(File.dirname(__FILE__) + "/../../templates/bootstrap.rb")
+        File.expand_path(File.dirname(__FILE__) + "/../../../templates/default/template.rb")
       end
 
-      def git_user_name
-        `git config --global user.name`.chomp.gsub('"', '\"') || "Quick Left"
-      end
-
-      def git_user_email
-        `git config --global user.email`.chomp || "me@me.com"
-      end
     end
   end
 end
