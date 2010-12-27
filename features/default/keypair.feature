@@ -1,4 +1,3 @@
-@wip 
 Feature:
   In order to deploy the app on EY Cloud
   As a user generating a new Rails app
