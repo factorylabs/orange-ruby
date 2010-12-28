@@ -5,8 +5,7 @@
 say "\nF/ Interactive Rails 3 Template\n"
 say "\nDetails at http://github.com/factorylabs/orange-ruby\n"
 
-require 'net/http'
-require 'net/https'
+require 'open-uri'
 
 template_root = File.expand_path(File.join(File.dirname(__FILE__)))
 source_paths << File.join(template_root, "files")
@@ -29,13 +28,8 @@ end
 
 def download_file(uri_string, destination)
   uri = URI.parse(uri_string)
-  http = Net::HTTP.new(uri.host, uri.port)
-  http.use_ssl = true if uri_string =~ /^https/
-  http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-  request = Net::HTTP::Get.new(uri.path)
-  contents = http.request(request).body
   path = File.join(destination_root, destination)
-  File.open(path, "w") { |file| file.write(contents) }
+  File.open(path, "w") { |file| file.write(uri.read) }
 end
 
 # Main template
@@ -50,14 +44,21 @@ apply File.join(File.dirname(__FILE__),'core_extensions.rb')
 apply File.join(File.dirname(__FILE__),'factory_girl.rb')
 apply File.join(File.dirname(__FILE__),'cucumber.rb')
 apply File.join(File.dirname(__FILE__),'generator_defaults.rb')
-apply File.join(File.dirname(__FILE__),'newrelic.rb')
-apply File.join(File.dirname(__FILE__),'hoptoad.rb')
 apply File.join(File.dirname(__FILE__),'ey_cloud.rb')
 apply File.join(File.dirname(__FILE__),'keypair.rb')
 apply File.join(File.dirname(__FILE__),'database.rb')
 apply File.join(File.dirname(__FILE__),'ci.rb')
 apply File.join(File.dirname(__FILE__),'git.rb')
 
+# Stuff needing API keys
+config_file = File.expand_path('~/.orangerc')
+if File.exists?(creds_file)
+  orange_config = YAML::load(File.open(config_file))
+  apply File.join(File.dirname(__FILE__),'newrelic.rb')
+  apply File.join(File.dirname(__FILE__),'hoptoad.rb')
+end
+  
+# Finish up
 rake 'db:migrate'
 rake
 
