@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    orange-ruby (0.0.1)
+    orange-ruby (0.1.0)
       rails (~> 3.0.3)
       thor
 
