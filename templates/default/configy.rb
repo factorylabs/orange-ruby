@@ -1,5 +1,3 @@
-say "Setting up Configy ..."
-
 initializer 'configy.rb', <<-RUBY.gsub(/^ {2}/, '')
   # Use Configy (http://github.com/gvarela/configy) for application-wide configuration
   # Load application-specific configuration from config/config.yml.

@@ -1,5 +1,4 @@
 # Set up generator defaults  
-log "\n    Setting up generator defaults ...\n"
 generators = <<-RUBY
   config.generators do |g|
       g.template_engine     :haml

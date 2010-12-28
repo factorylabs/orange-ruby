@@ -1,5 +1,4 @@
 # Tweak app layout to use HAML
-say "\n    Converting application layout in HAML ...\n"
 layout = <<-LAYOUT.gsub(/^ {2}/, '')
   !!!
   %html

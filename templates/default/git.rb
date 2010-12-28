@@ -1,11 +1,8 @@
-# Initialize Git repository
-say "\n-- Initializing Git repository ...\n"
-
+# Keep the log and tmp directories intact
 create_file "log/.gitkeep"
 create_file "tmp/.gitkeep"
 
 # Create a .gitignore file and a new local repository, commit everything
-say "\n    Creating .gitignore ...\n"
 remove_file '.gitignore'
 
 file '.gitignore', <<-CODE.gsub(/^ {2}/, '')
@@ -44,9 +41,9 @@ file '.gitignore', <<-CODE.gsub(/^ {2}/, '')
   packages
 CODE
 
-# Do the initial commit
-say "\n    Creating the repo  ...\n"
-
+# Initialize Git repository
 git :init
+
+# Do the initial commit
 git :add => "."
 git :commit => "-am 'Initial commit.'"

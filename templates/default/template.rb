@@ -2,8 +2,8 @@
 # ======================
 # by F/ Interactive
 
-say "\nF/ Interactive Rails 3 Template\n"
-say "\nDetails at http://github.com/factorylabs/orange-ruby\n"
+say "F/ Interactive Rails 3 Template"
+say "Details at http://github.com/factorylabs/orange-ruby"
 
 require 'open-uri'
 
@@ -71,4 +71,4 @@ docs = <<-DOCS
 - Import your config/newrelic.yml
 DOCS
 
-log docs
+say docs

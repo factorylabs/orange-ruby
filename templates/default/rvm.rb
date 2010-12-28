@@ -1,5 +1,4 @@
 # Configure RVM
-say "\n-- Processing RVM ...\n"
 
 ## Use REE and an app-specific gemset
 desired_ruby  = 'ree'

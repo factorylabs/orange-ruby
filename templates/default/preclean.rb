@@ -1,5 +1,3 @@
-say "Getting rid of files Rails provides that we don't use"
-
 remove_file "README"
 remove_file "public/index.html"
 remove_file "public/images/rails.png"

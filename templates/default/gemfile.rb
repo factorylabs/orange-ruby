@@ -1,5 +1,4 @@
 # Configure gems
-say "\n-- Processing Gemfile ...\n"
 
 ## Basic Gems
 gem 'bundler',            '1.0.7'
@@ -24,7 +23,6 @@ gem 'ruby-debug',                                       :group => [ :development
 gem 'rake-hooks',                   :require => false,  :group => [ :development ]
 gem 'factory_girl_generator',                           :group => [ :development, :test]
 gem 'shoulda',                                          :group => [ :development, :test]
-
 
 ## Test Gems
 gem 'evergreen',                    :require => 'evergreen/rails'

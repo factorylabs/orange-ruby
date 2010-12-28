@@ -1,6 +1,4 @@
 # Set up EY hooks files
-say "Setting up EY Cloud deploy hooks ..."
-
 empty_directory 'deploy'
 
 file 'deploy/before_migrate.rb', <<-RUBY.gsub(/^ {2}/, '')
