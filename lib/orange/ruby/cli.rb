@@ -12,7 +12,8 @@ module Orange
       def rails(project)
         exec(<<-COMMAND)
           rails new #{project} \
-            --template=#{template}
+            --template=#{template} \
+            --database=mysql
         COMMAND
       end
 
