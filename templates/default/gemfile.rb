@@ -17,6 +17,7 @@ gem 'hoptoad_notifier'
 ## Development gems
 gem 'annotate'
 gem 'engineyard',                   :require => false,  :group => [ :development ]
+gem 'jquery-rails',                                     :group => [ :development ]
 gem 'db-entropy',                   :require => false
 gem 'ruby-debug',                                       :group => [ :development, :test ]
 gem 'rake-hooks',                   :require => false,  :group => [ :development ]
