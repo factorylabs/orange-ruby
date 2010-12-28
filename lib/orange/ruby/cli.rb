@@ -7,7 +7,7 @@ module Orange
       include Thor::Actions
 
       desc "rails [app]", "Create a new Rails 3 application from the default template"
-      long_desc "Orange will generate a new Rails 3 application for you based on on the Factory default template"
+      long_desc "Orange will generate a new basic Rails 3 application for you based on on the Factory default template"
     
       def rails(project)
         exec(<<-COMMAND)
