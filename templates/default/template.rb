@@ -58,6 +58,9 @@ apply File.join(File.dirname(__FILE__),'database.rb')
 apply File.join(File.dirname(__FILE__),'ci.rb')
 apply File.join(File.dirname(__FILE__),'git.rb')
 
+rake 'db:migrate'
+rake
+
 # Final housekeeping
 
 docs = <<-DOCS
