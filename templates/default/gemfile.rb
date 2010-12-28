@@ -17,11 +17,14 @@ gem 'hoptoad_notifier'
 ## Development gems
 gem 'annotate'
 gem 'engineyard',                   :require => false,  :group => [ :development ]
+gem 'rails3-generators',                                :group => [ :development ]
 gem 'jquery-rails',                                     :group => [ :development ]
 gem 'db-entropy',                   :require => false
 gem 'ruby-debug',                                       :group => [ :development, :test ]
 gem 'rake-hooks',                   :require => false,  :group => [ :development ]
 gem 'factory_girl_generator',                           :group => [ :development, :test]
+gem 'shoulda',                                          :group => [ :development, :test]
+
 
 ## Test Gems
 gem 'evergreen',                    :require => 'evergreen/rails'
