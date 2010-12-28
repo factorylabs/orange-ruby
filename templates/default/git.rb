@@ -50,6 +50,3 @@ say "\n    Creating the repo  ...\n"
 git :init
 git :add => "."
 git :commit => "-am 'Initial commit.'"
-
-# Push to Github
-# TODO: implement me

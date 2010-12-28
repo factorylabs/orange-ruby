@@ -56,6 +56,7 @@ if File.exists?(creds_file)
   orange_config = YAML::load(File.open(config_file))
   apply File.join(File.dirname(__FILE__),'newrelic.rb')
   apply File.join(File.dirname(__FILE__),'hoptoad.rb')
+  apply File.join(File.dirname(__FILE__),'github.rb')
 end
   
 # Finish up
